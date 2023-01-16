@@ -27,6 +27,11 @@ def insertData():
 
 while True:
     federacao = str(input('Federação: ')).strip().upper()
+    
+    if federacao == 'D':
+        cursor.execute("DELETE FROM estados")
+        break
+
     estado = str(input('Estado: ')).strip().capitalize()
     população = float(input('População: '))
     idh = float(input('IDH: '))
